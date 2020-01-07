@@ -1,0 +1,24 @@
+button{
+    height: 30px;
+    width: 30px;
+}
+p{
+    color: white;
+}
+.play{
+    height: auto;
+    width: auto;
+}
+input{
+    border-radius: 1em;
+}
+#MS {
+    background-color: gray;
+    margin: 30px auto;
+    width: 320px;
+    height: 320px;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-row-gap: 2px;
+    grid-column-gap: 2pxs;
+}

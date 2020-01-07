@@ -9,7 +9,6 @@ let capacity = 6;
 let c = 0;
 let b = 0;
 function RouletteRReload(){
-    //wait(1000)
     document.getElementById("imagen").src="https://i.imgur.com/aCcPPPe.gif";
     if (c === 6){
         c=0;
@@ -21,7 +20,6 @@ function RouletteRReload(){
        b++
     }
     document.getElementById("bullet"+c).style.backgroundColor="blue"
-    //alert("Cargada posicion: "+(1+c))
     document.getElementById("respuesta").textContent="Cargada Posicion:"+(1+c);
     if (c === 5){
         document.getElementById("respuesta").textContent="Hay: "+b+" balas en el arma";
@@ -29,10 +27,10 @@ function RouletteRReload(){
     }
     document.getElementById("bullet"+c).title=(c+1)
     c++
-    //RouletteRReload()
 }
 
 function RouletteReload() {
+    gun = [0,0,0,0,0,0];
     let bullet = Math.trunc(Math.random() * (6 - 0) + 0);
     gun[bullet]=1;
     document.getElementById("imagen").src="https://i.imgur.com/aCcPPPe.gif";
@@ -54,7 +52,7 @@ function RouletteFire(){
             break;
         }
         if (counter==capacity){
-            //alert("Recargue el Arma por favor");
+            //alert("Reload the Gun plase");
             document.getElementById("respuesta").textContent="Reload the Gun Please"
             return
         }
@@ -76,13 +74,3 @@ function RouletteFire(){
         position++
     }
 }
-
-//Esto esta horrible, no hacerlo en casa
-
-function wait(ms){
-    var start = new Date().getTime();
-    var end = start;
-    while(end < start + ms) {
-      end = new Date().getTime();
-   }
- }
